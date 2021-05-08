@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --primary: #fff ;
+    --secondary: rgb(0, 0, 0) ; 
+    --tertiary: rgb(7, 13, 102);
+    --purple: rgb(177, 87, 189);
+    font-size: 62.5%;
+  }
+
+  
+body {
+    color:var(--primary);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+/* header style end */
+  header {
+    background-color: var(--primary);
+    color: var(--secondary);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 3px 3px;
+  }
+
+  header a {
+      color: var(--purple);
+      text-decoration: none;
+  }
+
+  header p {
+      color: var(--tertiary);
+      font-weight: bold;
+      font-size: 1.5rem;
+  }
+  /* header style end*/
+
+  /* content style */
+
+  .page-title {
+    color: var(--secondary);
+    margin-bottom: 5px;
+    margin-top: 60px;
+    font-size: 4.5rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .instruction {
+      color: var(--secondary);
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      margin-top: 35px;
+      display: flex;
+      justify-content: center;
+    }
+
+  body {
+    color: var(--secondary);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  .btn {
+    color: var(--primary);
+    outline: none;
+    border: none;
+    padding: 10px 15px;
+    background: var(--tertiary);
+    font-size: 2.2rem;
+    border-radius: 12px;
+    top: -3px;
+ }
+
+ .button-start {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 55px;
+  }
+
+  form input {
+    outline: none;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    font-size: 2.2rem;
+    border: 2px solid var(--grey);
+    border-radius: 12px;
+  }
+  
+  /* content style end */
