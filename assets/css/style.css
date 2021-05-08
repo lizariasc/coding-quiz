@@ -8,6 +8,7 @@
     --secondary: rgb(0, 0, 0) ; 
     --tertiary: rgb(7, 13, 102);
     --purple: rgb(177, 87, 189);
+    --grey: rgb(184, 178, 178);
     font-size: 62.5%;
   }
 
@@ -117,25 +118,56 @@ body {
   margin-top: 50px;
   }
 
-  form input {
+/* all done page style */ 
+
+  .all-done-container p {
+    font-size: 2rem;
+    line-height: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .initials-form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .initials-form input {
     outline: none;
     border: none;
     padding: 12px;
-    width: 100%;
-    font-size: 2.2rem;
+    font-size: 1.5rem;
     border: 2px solid var(--grey);
-    border-radius: 12px;
+    padding: 5px;
   }
 
+  /* All done page style end */
+
+  /* high scores page style */
+
+
+
+  /* high scores page style end */
+
   footer {
-    width: 90%;
+    width: 70%;
     background: var(--primary);
-    color: var(rgb(167, 167, 167));
-    font-size: 2.4rem;
-    padding: 20px;
     border-top: 0.5px solid var(--purple);
+    margin: 0 auto;
+    margin-top: 40px;
+
   }
   
+  footer h3 {
+    font-size: 2rem;
+    color: var(--grey);
+    font-weight: lighter;
+    font-style: italic;
+  }
+
   /* content style end */
 
   /* media queries */

@@ -15,7 +15,8 @@
    <p id="#coundown">Time: 0</p>
   </header>
   <main>
-    <section class="">
+    <!-- HOME PAGE -->
+    <section class="hide">
         <h1 class="page-title">Coding Quiz Challenge</h1>
       <div>
        <p class="instruction">Try to answer the following code-related questions within the time limit. <br>
@@ -26,7 +27,9 @@
        <button class="btn">Start Quiz</button>
       </div>
     </section>
-      <section class="hide">
+      
+      <!-- QUESTIONS AND ANSWERS -->
+    <section class="question-container hide">
         <h1 class="page-title">First Question</h1>
           <div class="answer-btn" class=>
             <button class="btn">Answer 1</button>
@@ -35,7 +38,31 @@
             <button class="btn">Answer 4</button>
         </div>
     </section>
+
+  <!-- ALL DONE/ENTER INITIALS PAGE -->
+  <section class="all-done-container">
+  <h1 class="page-title">All done!</h1>
+  <p>Your final score is 22.</p>
+    <div class="initials-form">
+          <p>Enter your initials here:</p>
+            <input type="text" name="initials" />
+        <button class="btn" id="save-score" type="submit">Submit</button>
+    </div>
+</section>
   </main>
+
+   <!-- HIGH SCORES PAGE -->
+
+
+
+  <!-- WRONG/RIGHT FOOTERS -->
+  <footer class="hide">
+    <h3>Wrong!</h3> 
+  </footer>
+  <footer class="hide">
+   <h3>Correct!</h3>
+  </footer>
+
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
