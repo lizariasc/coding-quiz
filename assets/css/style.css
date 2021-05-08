@@ -1,4 +1,5 @@
-* {
+*, *::before, *::after {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
     box-sizing: border-box;
   }
   
@@ -12,8 +13,8 @@
 
   
 body {
-    color:var(--primary);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color:var(--primary);
+    color: var(--secondary);
   }
 
 /* header style end */
@@ -24,6 +25,10 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 3px 3px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
   }
 
   header a {
@@ -43,10 +48,9 @@ body {
   .page-title {
     color: var(--secondary);
     margin-bottom: 5px;
-    margin-top: 60px;
+    margin-top: 80px;
     font-size: 4.5rem;
-    display: flex;
-    justify-content: center;
+    text-align: center;
   }
 
   .instruction {
@@ -59,9 +63,13 @@ body {
       justify-content: center;
     }
 
-  body {
-    color: var(--secondary);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  .container {
+    width: 800px;
+    max-width: 1000%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
 
   .btn {
@@ -75,6 +83,24 @@ body {
     top: -3px;
  }
 
+ .container {
+   width: 800px;
+   max-width: 80%;
+ }
+
+ .answer-btn {
+   display: grid;
+   margin-top: 50px;
+   gap: 10px;
+   width: 20rem;
+   justify-content: center;
+   margin-left: 15%;
+ }
+
+ .hide {
+   display: none;
+ }
+
  .btn:hover {
      background-color: var(--purple);
      cursor: pointer;
@@ -85,10 +111,10 @@ body {
   }
 
  .button-start {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 55px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
   }
 
   form input {
