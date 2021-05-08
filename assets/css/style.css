@@ -75,6 +75,15 @@ body {
     top: -3px;
  }
 
+ .btn:hover {
+     background-color: var(--purple);
+     cursor: pointer;
+ }
+
+ .btn:active {
+    box-shadow: var(--purple);
+  }
+
  .button-start {
     display: flex;
     flex-wrap: wrap;
@@ -91,5 +100,28 @@ body {
     border: 2px solid var(--grey);
     border-radius: 12px;
   }
+
+  footer {
+    width: 90%;
+    background: var(--primary);
+    color: var(rgb(167, 167, 167));
+    font-size: 2.4rem;
+    padding: 20px;
+    border-top: 0.5px solid var(--purple);
+  }
   
   /* content style end */
+
+  /* media queries */
+  @media screen and (max-width: 980px) {
+    .page-title {
+        flex: 1 80%;
+        text-align: center;
+    }
+  
+    main {
+      width: 100%;
+      flex-basis: 100%;
+    }
+  
+ }
