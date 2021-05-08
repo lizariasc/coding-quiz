@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-  <header>
+  <header class="hide">
    <h2>
     <a href="/">View high scores</a>
    </h2>
@@ -40,7 +40,7 @@
     </section>
 
   <!-- ALL DONE/ENTER INITIALS PAGE -->
-  <section class="all-done-container">
+  <section class="all-done-container hide">
   <h1 class="page-title">All done!</h1>
   <p>Your final score is 22.</p>
     <div class="initials-form">
@@ -49,10 +49,21 @@
         <button class="btn" id="save-score" type="submit">Submit</button>
     </div>
 </section>
-  </main>
 
    <!-- HIGH SCORES PAGE -->
-
+   <section class="scores-container">
+    <h1 class="page-title">High scores</h1>
+    <div class="score-list">
+      <ol>
+     <li>AB - 22</li>
+    </ol>
+     <form>
+      <button class="btn" id="go-back">Go back</button>
+      <button class="btn" id="clear">Clear high scores</button>
+     </form>
+    </div>
+  </section>
+    </main>
 
 
   <!-- WRONG/RIGHT FOOTERS -->

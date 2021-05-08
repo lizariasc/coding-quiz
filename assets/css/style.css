@@ -80,7 +80,7 @@ body {
     padding: 10px 15px;
     background: var(--tertiary);
     font-size: 2.2rem;
-    border-radius: 12px;
+    border-radius: 10px;
     top: -3px;
  }
 
@@ -147,8 +147,15 @@ body {
   /* All done page style end */
 
   /* high scores page style */
+  .score-list {
+    display: grid;
+    justify-content: center;
+  }
 
-
+  li {
+    font-size: 2rem;
+    width: 80%;
+  }
 
   /* high scores page style end */
 
