@@ -8,15 +8,15 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-  <header class="hide">
+  <header class="">
    <h2>
     <a href="/">View high scores</a>
    </h2>
-   <p id="#coundown">Time: 0</p>
+   <p id="#coundown">Time: <span id="count">0</span></p>
   </header>
   <main>
     <!-- HOME PAGE -->
-    <section class="hide">
+    <section class="">
         <h1 class="page-title">Coding Quiz Challenge</h1>
       <div>
        <p class="instruction">Try to answer the following code-related questions within the time limit. <br>
@@ -24,56 +24,9 @@
           Good luck!
        </p>
        <div class="button-start">
-       <button class="btn">Start Quiz</button>
+       <button id="start-btn" class="start-btn btn">Start Quiz</button>
       </div>
     </section>
-      
-      <!-- QUESTIONS AND ANSWERS -->
-    <section class="question-container hide">
-        <h1 class="page-title">First Question</h1>
-          <div class="answer-btn" class=>
-            <button class="btn">Answer 1</button>
-            <button class="btn">Answer 2</button>
-            <button class="btn">Answer 3</button>
-            <button class="btn">Answer 4</button>
-        </div>
-    </section>
-
-  <!-- ALL DONE/ENTER INITIALS PAGE -->
-  <section class="all-done-container hide">
-  <h1 class="page-title">All done!</h1>
-  <p>Your final score is 22.</p>
-    <div class="initials-form">
-          <p>Enter your initials here:</p>
-            <input type="text" name="initials" />
-        <button class="btn" id="save-score" type="submit">Submit</button>
-    </div>
-</section>
-
-   <!-- HIGH SCORES PAGE -->
-   <section class="scores-container">
-    <h1 class="page-title">High scores</h1>
-    <div class="score-list">
-      <ol>
-     <li>AB - 22</li>
-    </ol>
-     <form>
-      <button class="btn" id="go-back">Go back</button>
-      <button class="btn" id="clear">Clear high scores</button>
-     </form>
-    </div>
-  </section>
-    </main>
-
-
-  <!-- WRONG/RIGHT FOOTERS -->
-  <footer class="hide">
-    <h3>Wrong!</h3> 
-  </footer>
-  <footer class="hide">
-   <h3>Correct!</h3>
-  </footer>
-
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
