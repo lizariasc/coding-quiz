@@ -2,34 +2,35 @@
 
 ## Description
 
-This website is a coding quiz with multiple-choice questions about JavaScript fundamentals that allows you to save high scores. 
-Practice your knowledge about JavaScript. Go ahead and click on the link, Good luck!
+This website is a coding quiz with multiple-choice questions that allows you to practice your knowledge about JavaScript fundamentals. You can challenge your classmates and save your scores.
+Go ahead and try it out, Good luck!
 
 ## Website link
 
-lizariasc.github.io/coding-quiz
+[Coding Quiz Challenge](lizariasc.github.io/coding-quiz)
 
-## Features and problems solved
+## Features and problems solved:
 
- 1. When you click the Start Quiz button, the timer starts and the first question appears
+ 1. When you click the Start Quiz button, the timer starts and I am presented with the first question. 
 
+ 2. When I answer a question, I am presented with another question.
 
- 2. When you answer a questions incorrectly, time is subtracted from the timer
+ 3. When I answer a question incorrectly, 10 seconds are subtracted from the clock.
 
+ 3. When you answer all the questions or the timer reaches 0, the game is over.
 
- 3. When you answer all the questions or the timer reaches 0, the game is over
-
-
- 4. You can see your total score and enter your initials to save it
-
+ 4. After that, you can see your total score and enter your initials to save it.
 
  6. You can keep track of the high scores
-   * Used localStorage
 
 ## Built With
 
  * HTML
  * CSS 
- * JavaScript 
+ * JavaScript (DOM Manipulation)
 
-## Mock up of the Website
+## Mock up of the functioning website
+![Start page](./assets/images/mock-up1.png)
+![First question](./assets/images/mock-up2.png)
+![Enter initials](./assets/images/mock-up7.png)
+![High scores](./assets/images/mock-u8.png)
