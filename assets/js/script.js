@@ -30,10 +30,10 @@ var quizQuestions = [{
     correctAnswer: "a"},
   {
     question: "What is the correct syntax of the following variable?",
-    choiceA: "var (Name = 'Tony the Robot');",
-    choiceB: "var = name ('Tony the Robot')",
-    choiceC: "var name = 'Tony the Robot';",
-    choiceD: "var Name = 'Tony the Robot'",
+    choiceA: "var (Name = \"Tony the Robot\");",
+    choiceB: "var = name (\"Tony the Robot\")",
+    choiceC: "var name = \"Tony the Robot\";",
+    choiceD: "var Name = \"Tony the Robot\"",
     correctAnswer: "c"},
    {
     question: "Which one of the following operators returns false if both values are equal?",
@@ -113,9 +113,9 @@ submitScoreBtn.addEventListener("click", function highscore(){
     
     
     if(highscoreInputName.value === "") {
-        alert("Initials cannot be blank. Please enter your initials.");
+        alert("You must enter your initials.");
         return false;
-    }else{
+    } else {
         var savedHighscores = JSON.parse(localStorage.getItem("savedHighscores")) || [];
         var currentUser = highscoreInputName.value.trim();
         var currentHighscore = {
