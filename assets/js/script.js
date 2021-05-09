@@ -161,6 +161,23 @@ function showHighscore(){
   generateHighscores();
 }
 
+// Clear localStorage and High scores list
+function clearScore(){
+  window.localStorage.clear();
+  highscoreDisplayName.textContent = "";
+  highscoreDisplayScore.textContent = "";
+}
+
+// Play again Function
+function replayQuiz(){
+  highscoreContainer.style.display = "none";
+  gameoverDiv.style.display = "none";
+  startQuizDiv.style.display = "flex";
+  count = 76;
+  score = 0;
+  currentQuestionIndex = 0;
+}
+
 
 // Check if the answer is correct or incorrect
 function checkAnswer(answer){
