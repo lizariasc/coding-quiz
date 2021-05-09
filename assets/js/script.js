@@ -98,6 +98,14 @@ function startQuiz(){
       }, 1000);
     quizBody.style.display = "block";
 }
+// After completing the questions or when the time is up, I am presented with my final score
+function showScore(){
+  quizBody.style.display = "none"
+  gameoverDiv.style.display = "flex";
+  clearInterval(timerInterval);
+  highscoreInputName.value = "";
+  finalScoreEl.innerHTML = "All done! Your final score is " + score + ".";
+}
 
 // Check if the answer is correct or incorrect
 function checkAnswer(answer){
