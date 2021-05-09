@@ -7,7 +7,7 @@ Go ahead and try it out, Good luck!
 
 ## Website link
 
-[Coding Quiz Challenge](lizariasc.github.io/coding-quiz)
+https://lizariasc.github.io/coding-quiz/
 
 ## Features and problems solved:
 
@@ -30,13 +30,4 @@ Go ahead and try it out, Good luck!
  * JavaScript (DOM Manipulation)
 
 ## Mock up of the functioning website
-![Start page](./assets/images/mock-up1.png)
-
-### Example of one of the questions
-![First question](./assets/images/mock-up2.png)
-
-### When the game is over, I can see my score and save my initials
-![Enter initials](./assets/images/mock-up7.png)
-
-### Saved high scores
-![High scores](./assets/images/mock-up8.png)
+![Mock-up](./assets/mockup.gif) 
