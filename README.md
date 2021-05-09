@@ -32,11 +32,11 @@ Go ahead and try it out, Good luck!
 ## Mock up of the functioning website
 ![Start page](./assets/images/mock-up1.png)
 
-# Example of one of the questions
+### Example of one of the questions
 ![First question](./assets/images/mock-up2.png)
 
-# When the game is over, I can see my score and save my initials
+### When the game is over, I can see my score and save my initials
 ![Enter initials](./assets/images/mock-up7.png)
 
-# Saved high scores
-![High scores](./assets/images/mock-u8.png)
+### Saved high scores
+![High scores](./assets/images/mock-up8.png)
