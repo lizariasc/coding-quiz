@@ -106,6 +106,61 @@ function showScore(){
   highscoreInputName.value = "";
   finalScoreEl.innerHTML = "All done! Your final score is " + score + ".";
 }
+// On click of the submit button, we run the function highscore that saves and stringifies the array of high scores already saved in localStorage
+// We push the user initials and score into the array we are saving in localStorage. 
+submitScoreBtn.addEventListener("click", function highscore(){
+  
+  
+  if(highscoreInputName.value === "") {
+      alert("Initials cannot be blank. Please enter your initials.");
+      return false;
+  }else{
+      var savedHighscores = JSON.parse(localStorage.getItem("savedHighscores")) || [];
+      var currentUser = highscoreInputName.value.trim();
+      var currentHighscore = {
+          name : currentUser,
+          score : score
+      };
+  
+      gameoverDiv.style.display = "none";
+      highscoreContainer.style.display = "flex";
+      highscoreDiv.style.display = "block";
+      endGameBtns.style.display = "flex";
+      
+      savedHighscores.push(currentHighscore);
+      localStorage.setItem("savedHighscores", JSON.stringify(savedHighscores));
+      generateHighscores();
+
+  }
+  
+});
+
+// Generate a new list from data saved in from localStorage
+function generateHighscores(){
+  highscoreDisplayName.innerHTML = "";
+  highscoreDisplayScore.innerHTML = "";
+  var highscores = JSON.parse(localStorage.getItem("savedHighscores")) || [];
+  for (i=0; i<highscores.length; i++){
+      var newNameSpan = document.createElement("li");
+      var newScoreSpan = document.createElement("li");
+      newNameSpan.textContent = highscores[i].name;
+      newScoreSpan.textContent = highscores[i].score;
+      highscoreDisplayName.appendChild(newNameSpan);
+      highscoreDisplayScore.appendChild(newScoreSpan);
+  }
+}
+
+// Display the High scores page hiding all the other pages
+function showHighscore(){
+  startQuizDiv.style.display = "none"
+  gameoverDiv.style.display = "none";
+  highscoreContainer.style.display = "flex";
+  highscoreDiv.style.display = "block";
+  endGameBtns.style.display = "flex";
+
+  generateHighscores();
+}
+
 
 // Check if the answer is correct or incorrect
 function checkAnswer(answer){
