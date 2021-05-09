@@ -212,14 +212,13 @@ body {
     }
 
     @media screen and (max-width: 575px) {
-
     .end-btn {
        gap: 10px;
        display: flex;
        flex-wrap: wrap;
       justify-content: center;
     }
-
+    
     .highscore-list {
       display: flex;
       justify-content: center;
