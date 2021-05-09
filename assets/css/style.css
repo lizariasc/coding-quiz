@@ -28,7 +28,6 @@ body {
   h1 {
     color: var(--secondary);
     margin-bottom: 5px;
-    margin-top: 80px;
     font-size: 4.5rem;
     text-align: center;
   }
@@ -213,11 +212,18 @@ body {
     }
 
     @media screen and (max-width: 575px) {
+
     .end-btn {
        gap: 10px;
        display: flex;
        flex-wrap: wrap;
       justify-content: center;
+    }
+
+    .highscore-list {
+      display: flex;
+      justify-content: center;
+      gap: 100px;
     }
  }
 }
