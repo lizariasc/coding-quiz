@@ -1,43 +1,62 @@
- // The array of questions for the  quiz
 
- var quizQuestions = [{
-  question:"The \"function\" and \"var\" are known as:",
-  choiceA: "Declaration statements",
-  choiceB: "Keywords",
-  choiceC: "Data types",
-  choiceD: "Prototypes",
-  correctAnswer: "a"},
-{
-  question: "What is the correct syntax of the following variable?",
-  choiceA: "var (Name = 'Tony the Robot');",
-  choiceB: "var = name ('Tony the Robot')",
-  choiceC: "var name = 'Tony the Robot';",
-  choiceD: "var Name = 'Tony the Robot'",
-  correctAnswer: "c"},
- {
-  question: "Which one of the following operators returns false if both values are equal?",
-  choiceA: "!",
-  choiceB: "!=",
-  choiceC: "!==",
-  choiceD: "All of the above",
-  correctAnswer: "b"},
+// HTML elements
+var quizBody = document.getElementById("quiz");
+var resultsEl = document.getElementById("result");
+var finalScoreEl = document.getElementById("finalScore");
+var gameoverDiv = document.getElementById("gameover");
+var questionsEl = document.getElementById("questions");
+var quizTimer = document.getElementById("timer");
+var startQuizButton = document.getElementById("startbtn");
+var startQuizDiv = document.getElementById("startpage");
+var highscoreContainer = document.getElementById("highscoreContainer");
+var highscoreDiv = document.getElementById("high-scorePage");
+var highscoreInputName = document.getElementById("initials");
+var highscoreDisplayName = document.getElementById("highscore-initials");
+var endGameBtns = document.getElementById("endGameBtns");
+var submitScoreBtn = document.getElementById("submitScore");
+var highscoreDisplayScore = document.getElementById("highscore-score");
+var buttonA = document.getElementById("a");
+var buttonB = document.getElementById("b");
+var buttonC = document.getElementById("c");
+var buttonD = document.getElementById("d");
+
+// Questions 
+var quizQuestions = [{
+    question:"The \"function\" and \"var\" are known as:",
+    choiceA: "Declaration statements",
+    choiceB: "Keywords",
+    choiceC: "Data types",
+    choiceD: "Prototypes",
+    correctAnswer: "a"},
   {
-  question: "Inside which HTML element do we put the JavaScript?",
-  choiceA: "&lt;script&gt;",
-  choiceB: "&lt;link&gt;",
-  choiceC: "&lt;head&gt;",
-  choiceD: "&lt;meta&gt;",
-  correctAnswer: "a"},
-  {
-  question: "Which of the following is the correct syntax to display 'Almost there!' in an alert box?",
-  choiceA: "alert-box('Almost done!');",
-  choiceB: "confirm('Almost done!');",
-  choiceC: "msg-box('Almost done!');",
-  choiceD: "alert('Almost done!');",
-  correctAnswer: "d"},  
-  ];
-
-
+    question: "What is the correct syntax of the following variable?",
+    choiceA: "var (Name = 'Tony the Robot');",
+    choiceB: "var = name ('Tony the Robot')",
+    choiceC: "var name = 'Tony the Robot';",
+    choiceD: "var Name = 'Tony the Robot'",
+    correctAnswer: "c"},
+   {
+    question: "Which one of the following operators returns false if both values are equal?",
+    choiceA: "!",
+    choiceB: "!=",
+    choiceC: "!==",
+    choiceD: "All of the above",
+    correctAnswer: "b"},
+    {
+    question: "Inside which HTML element do we put the JavaScript?",
+    choiceA: "&lt;script&gt;",
+    choiceB: "&lt;link&gt;",
+    choiceC: "&lt;head&gt;",
+    choiceD: "&lt;meta&gt;",
+    correctAnswer: "a"},
+    {
+    question: "Which of the following is the correct syntax to display 'Almost there!' in an alert box?",
+    choiceA: "alert-box('Almost done!');",
+    choiceB: "confirm('Almost done!');",
+    choiceC: "msg-box('Almost done!');",
+    choiceD: "alert('Almost done!');",
+    correctAnswer: "d"},  
+    ];
 
 var finalQuestionIndex = quizQuestions.length;
 var currentQuestionIndex = 0;
@@ -78,15 +97,29 @@ function startQuiz(){
         }
       }, 1000);
     quizBody.style.display = "block";
- 
+}
 
+// Check if the answer is correct or incorrect
+function checkAnswer(answer){
+    correct = quizQuestions[currentQuestionIndex].correctAnswer;
 
-  
-  
-    // If I click Start Quiz I am presented with the first question
-    // A footer shows up telling me if my answer was correct or not
-    // If I answer incorrectly 10 seconds are subtracted from the timer
-    // When I finish the questions, I can enter my initials
-    // I can store and look up high scores
-    // Go back to the beggining 
-   }
+    if (answer === correct && currentQuestionIndex !== finalQuestionIndex){
+        score++;
+        alert("Correct!");
+        currentQuestionIndex++;
+        generateQuizQuestion();
+        //display in the results div that the answer is correct.
+    } else if (answer !== correct && currentQuestionIndex !== finalQuestionIndex) {
+        // If incorrect, subtract 10sec from timer
+        count = count - penalty;
+        alert("Incorrect!")
+        currentQuestionIndex++;
+        generateQuizQuestion();
+        //display in the results div that the answer is wrong.
+    } else{
+        showScore();
+    }
+}
+
+// This button starts the quiz!
+startQuizButton.addEventListener("click",startQuiz);
