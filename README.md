@@ -30,4 +30,4 @@ https://lizariasc.github.io/coding-quiz/
  * JavaScript (DOM Manipulation)
 
 ## Mock up of the functioning website
-![Mock-up](./assets/mockup.gif) 
+![Mock-up](mockup.gif) 
