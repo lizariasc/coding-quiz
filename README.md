@@ -31,3 +31,7 @@ https://lizariasc.github.io/coding-quiz/
 
 ## Mock up of the functioning website
 ![Mock-up](mockup.gif) 
+
+## Sources
+https://www.youtube.com/watch?v=f4fB9Xg2JEY&t=1713s
+https://www.youtube.com/watch?v=riDzcEQbX6k&t=1447s
